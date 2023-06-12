@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Providers/AuthProviders';
+import { signInWithPopup } from 'firebase/auth';
 
 const Register = () => {
 
@@ -25,6 +26,8 @@ const Register = () => {
             console.log(error);
         })
     }
+
+
     return (
         <div className="hero min-h-screen bg-[#f4f3f3]">
             <div className="hero-content flex-col ">
@@ -64,7 +67,9 @@ const Register = () => {
                                 <a href="#" className=" label-text-alt link link-hover ml-4 mb-4 text-bold text-base">Already Have an Account?</a>
                             </label>
                     </Link>
+                    
                 </div>
+                
             </div>
         </div>
     );
